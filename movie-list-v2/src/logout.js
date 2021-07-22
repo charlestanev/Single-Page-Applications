@@ -4,8 +4,7 @@ function showPage() {
     logout();
 }
 
-function hidePage() {
-}
+function hidePage() {}
 
 export default {
     showPage,

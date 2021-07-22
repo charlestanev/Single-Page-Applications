@@ -9,12 +9,12 @@ function updateNavigation() {
             navItem.classList.add('hidden');
         }
 
-        
+
         for (const navItem of privatetNavItems) {
             navItem.classList.remove('hidden');
         }
     } else {
-        
+
         for (const navItem of guestNavItems) {
             navItem.classList.remove('hidden');
         }

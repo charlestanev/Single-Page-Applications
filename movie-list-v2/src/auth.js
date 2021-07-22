@@ -4,7 +4,7 @@ export function saveToken(token) {
 
 export function isAuthenticated() {
     let isAuth = Boolean(localStorage.getItem('auth_token'));
-    
+
     return isAuth;
 }
 

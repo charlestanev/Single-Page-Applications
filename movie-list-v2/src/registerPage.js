@@ -12,15 +12,15 @@ registerForm.addEventListener('submit', (e) => {
     let data = new FormData(registerForm);
 
     fetch(`${baseUrl}/users/register`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            email: data.get('email'),
-            password: data.get('password')
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: data.get('email'),
+                password: data.get('password')
+            })
         })
-    })
         .then(res => res.json())
         .then(responseData => {
             saveToken(responseData.accessToken);
@@ -37,8 +37,6 @@ function showPage() {
 function hidePage() {
     registerSection.classList.add('hidden');
 }
-
-
 
 export default {
     showPage,

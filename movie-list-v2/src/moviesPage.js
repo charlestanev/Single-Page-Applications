@@ -19,7 +19,7 @@ function renderMovies(movies) {
     let movieTemplate = moviesSection.querySelector('#movie-card-template');
     let movieListElement = document.querySelector('.movie-list');
     movieListElement.innerHTML = '';
-    
+
     for (const movie of movies) {
         let currentMovieElement = movieTemplate.cloneNode(true);
         currentMovieElement.classList.remove('hidden');
