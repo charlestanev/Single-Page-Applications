@@ -18,25 +18,31 @@ letCallback = undefined;
 //     let allLinks = document.querySelectorAll('.link');
 //     allLinks.forEach(a => a.addEventListener('click', changeViewHandler));
 // }
-function initialize(allLinkElements, callback) {
-    viewCallback = callback;
+function initialize(allLinkElements) {
     allLinkElements.forEach(a => a.addEventListener('click', changeViewHandler));
 }
 
-async function changeViewHandler(e) {
+export async function changeViewHandler(e) {
     // e = current id/route
     let route = e.target.dataset.route;
+    navigateTo(route);
+}
+
+export async function navigateTo(route) {
     console.log(route);
-    // if current od exist 
     if (views.hasOwnProperty(route)) {
         // page view = page view with this route/id
-        let viewFunction = views[route];
-        viewCallback(viewFunction);
+        let view = await views[route]();
+        let appElement = document.getElementById('main');
+        appElement.querySelectorAll('.view').forEach(v => v.remove());
+        appElement.appendChild(view);
     }
 }
 
 let viewFinder = {
-    initialize
+    initialize,
+    changeViewHandler,
+    navigateTo
 };
 
 export default viewFinder;

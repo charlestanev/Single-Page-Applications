@@ -31,18 +31,7 @@ async function setup() {
     addMoviePage.initilize(document.getElementById('add-movie'));
     movieDetailsPage.initilize(document.getElementById('movie-details'));
     editMoviePage.initilize(document.getElementById('edit-movie'));
-    viewFinder.initialize(document.querySelectorAll('.links'), );
+    viewFinder.initialize(document.querySelectorAll('.links'));
 
-    // show homepage
-    let homePageView = await homePage.getView();
-    appElement.appendChild(homePageView);
-}
-
-async function changeView(viewFunction) {
-    let view = await viewFunction();
-
-    // clear all views
-    appElement.querySelectorAll('.view').forEach(v => v.remove());
-    appElement.appendChild(view);
-
+    viewFinder.navigateTo('home');
 }
