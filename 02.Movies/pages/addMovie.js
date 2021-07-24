@@ -1,15 +1,15 @@
 let section = undefined;
 
-export function initilize(domElement) {
+export function initiliaze(domElement){
     section = domElement;
 }
 
-export async function getView() {
+export async function getView(){
     return section;
 }
 
 let addMoviePage = {
-    initilize,
+    initiliaze,
     getView
 };
 

@@ -1,6 +1,6 @@
-// 1. setup sections
-// 2. add data to HTML in order to work with HTML correctly
-// 3. create logic for showing views - routing
+//1. setup sections
+//2. add data to html in order to work with html correctly
+//3. create logic for showing views - routing 
 
 import addMoviePage from "./pages/addMovie.js";
 import editMoviePage from "./pages/editMovie.js";
@@ -12,26 +12,27 @@ import viewFinder from "./viewFinder.js";
 
 setup();
 
-async function setup() {
-    // setup HTML page login
-    // setup HTML page register
-    // setup HTML page logout ??? -maybe only logic
-    // setup HTML page homepage
-    // setup HTML page add movie
-    // setup HTML page movie details 
-    // setup HTML page edit movie
-    // setup HTML page likes ??? -maybe only logic
-    // setup HTML page delete ??? -maybe only logic
+async function setup(){
+    //setup html page login
+    //setup html page register
+    //setup html page logout??? - maybe only logic
+    //setup html page homepage
+    //setup html page add movie
+    //setup html page movie details
+    //setup html page edit movie
+    //setup html page likes?? - maybe only logic
+    //setup html page delete?? - maybe only logic
 
-    let appElement = document.getElementById('main');
-
-    loginPage.initilize(document.getElementById('form-login'));
-    registerPage.initilize(document.getElementById('form-sign-up'));
-    homePage.initilize(document.getElementById('home-page'));
-    addMoviePage.initilize(document.getElementById('add-movie'));
-    movieDetailsPage.initilize(document.getElementById('movie-details'));
-    editMoviePage.initilize(document.getElementById('edit-movie'));
-    viewFinder.initialize(document.querySelectorAll('.links'));
+    loginPage.initiliaze(document.getElementById('form-login'));
+    registerPage.initiliaze(document.getElementById('form-sign-up'));
+    homePage.initiliaze(document.getElementById('home-page'));
+    addMoviePage.initiliaze(document.getElementById('add-movie'));
+    movieDetailsPage.initiliaze(document.getElementById('movie-details'));
+    editMoviePage.initiliaze(document.getElementById('edit-movie'));
+    console.log('here');
+    viewFinder.initiliaze(document.querySelectorAll('.link'));
 
     viewFinder.navigateTo('home');
 }
+
+

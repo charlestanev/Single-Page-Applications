@@ -1,15 +1,15 @@
 let section = undefined;
 
-function initilize(domElement) {
+function initiliaze(domElement){
     section = domElement;
 }
 
-async function getView() {
+async function getView(){
     return section;
 }
 
 let editMoviePage = {
-    initilize,
+    initiliaze,
     getView
 };
 
